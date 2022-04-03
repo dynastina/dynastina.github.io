@@ -18,7 +18,7 @@ $(document).on('keydown', function (e) {
             setTimeout(function () {
                 $('.btn-up').removeClass('bg-secondary');
             }, 100);
-            
+
             break;
 
         case 39: // right
@@ -84,4 +84,92 @@ $(document).on('keydown', function (e) {
         default:
             return; // exit this handler for other keys
     }
+});
+
+$('.btn-up').on('click', function () {
+
+    up();
+
+    $('.btn-up').addClass('bg-secondary');
+    setTimeout(function () {
+        $('.btn-up').removeClass('bg-secondary');
+    }, 100);
+
+});
+
+$('.btn-left').on('click', function () {
+
+    left();
+
+    $('.btn-left').addClass('bg-secondary');
+    setTimeout(function () {
+        $('.btn-left').removeClass('bg-secondary');
+    }, 100);
+
+});
+
+$('.btn-right').on('click', function () {
+
+    right();
+
+    $('.btn-right').addClass('bg-secondary');
+    setTimeout(function () {
+        $('.btn-right').removeClass('bg-secondary');
+    }, 100);
+
+});
+
+$('.btn-down').on('click', function () {
+
+    down();
+
+    $('.btn-down').addClass('bg-secondary');
+    setTimeout(function () {
+        $('.btn-down').removeClass('bg-secondary');
+    }, 100);
+
+});
+
+$('.btn-attack').on('click', function () {
+
+    hit();
+
+    $('.btn-attack').addClass('bg-secondary');
+    setTimeout(function () {
+        $('.btn-attack').removeClass('bg-secondary');
+    }, 100);
+
+});
+
+$('.btn-shop').on('click', function () {
+
+    shop();
+
+    $('.btn-shop').addClass('bg-secondary');
+    setTimeout(function () {
+        $('.btn-shop').removeClass('bg-secondary');
+    }, 100);
+
+});
+
+$('.btn-help').on('click', function () {
+
+    help();
+
+    $('.btn-help').addClass('bg-secondary');
+    setTimeout(function () {
+        $('.btn-help').removeClass('bg-secondary');
+    }, 100);
+
+});
+
+$('.btn-info-dw').on('click', function () {
+
+    info();
+
+    $('.btn-info-dw').addClass('bg-secondary');
+    setTimeout(function () {
+        $('.btn-info-dw').removeClass('bg-secondary');
+    }, 100);
+
 });

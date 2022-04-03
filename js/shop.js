@@ -27,6 +27,9 @@ function buyShield() {
         // up
         shield += 1;
         $('#buy-shield-text').html(shield);
+
+        $('#dynecoin-info-text').html(dyneCoin);
+
     }
 }
 
@@ -49,6 +52,8 @@ function buyHp() {
         $('#hp-info-text').html(hpPlayer);
         $('#maxhp-info-text').html(maxHp);
 
+        $('#dynecoin-info-text').html(dyneCoin);
+
         console.log(maxHp);
         $('#hpPlayer').css('width', hpPlayer + '%');
     }
@@ -68,6 +73,8 @@ function buyRestoreHp() {
         $('#hp-info-text').html(hpPlayer);
         $('#maxhp-info-text').html(maxHp);
 
+        $('#dynecoin-info-text').html(dyneCoin);
+
         $('#hpPlayer').css('width', hpPlayer + '%');
     }
 }
@@ -83,5 +90,8 @@ function buyDamage() {
         // up
         damagePlayer += 1;
         $('#buy-damage-text').html(damagePlayer);
+
+        $('#dynecoin-info-text').html(dyneCoin);
+
     }
 }

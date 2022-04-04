@@ -161,7 +161,7 @@ function hit() {
             killPlayer++;
 
             if(killPlayer >= 5){
-                rageEnemy = true;
+                modeEnemy = 'bg-dark';
             }
 
             dyneCoin += 10;

@@ -36,9 +36,12 @@ function moveEnemy() {
         moveEnemy();
     }
 
-    $('.td').removeClass('bg-primary enemy');
+    $('.td').removeClass('enemy');
+    $('.td').removeClass(modeEnemy);
     $('.td').removeClass('bg-secondary');
-    $(`.td-${xEnemy}${yEnemy}`).addClass('bg-primary enemy');
+    
+    $(`.td-${xEnemy}${yEnemy}`).addClass('enemy');
+    $(`.td-${xEnemy}${yEnemy}`).addClass(modeEnemy);
 
 }
 

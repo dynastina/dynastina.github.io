@@ -67,7 +67,8 @@ function spawn() {
 
 function spawnEnemy() {
 
-    $('.td').removeClass('bg-primary enemy bg-secondary');
+    $('.td').removeClass('enemy bg-secondary');
+    $('.td').removeClass(modeEnemy);
 
     // restore health
     hpEnemy = 100;
@@ -85,6 +86,7 @@ function spawnEnemy() {
     xEnemy = Math.floor((Math.random() * width) + 1);
     yEnemy = Math.floor((Math.random() * height) + 1);
 
-    $(`.td-${xEnemy}${yEnemy}`).addClass('bg-primary enemy');
+    $(`.td-${xEnemy}${yEnemy}`).addClass('enemy');
+    $(`.td-${xEnemy}${yEnemy}`).addClass(modeEnemy);
 
 }

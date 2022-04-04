@@ -127,7 +127,7 @@ function hit() {
 
     if ((left.x == xEnemy && left.y == yEnemy) || (right.x == xEnemy && right.y == yEnemy) || (up.x == xEnemy && up.y == yEnemy) || (down.x == xEnemy && down.y == yEnemy)) {
 
-        $('.enemy').removeClass('bg-primary');
+        $('.enemy').removeClass(modeEnemy);
         $('.enemy').addClass('bg-secondary');
 
         randomHitPlayer = Math.floor((Math.random() * criticalRate) + 1);
@@ -160,6 +160,10 @@ function hit() {
 
             killPlayer++;
 
+            if(killPlayer >= 5){
+                rageEnemy = true;
+            }
+
             dyneCoin += 10;
 
             $('#killPlayer').html(killPlayer);
@@ -171,7 +175,7 @@ function hit() {
 
         setTimeout(function () {
             $('.enemy').removeClass('bg-secondary');
-            $('.enemy').addClass('bg-primary');
+            $('.enemy').addClass(modeEnemy);
 
             moveEnemy();
 

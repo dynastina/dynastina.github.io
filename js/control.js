@@ -81,6 +81,53 @@ $(document).on('keydown', function (e) {
 
             break;
 
+            // move wasd
+        case 87: // up
+            up();
+
+            $('.btn-up').addClass('bg-secondary');
+            setTimeout(function () {
+                $('.btn-up').removeClass('bg-secondary');
+            }, 100);
+
+            break;
+
+        case 65: // left
+            left();
+
+            $('.btn-left').addClass('bg-secondary');
+            setTimeout(function () {
+                $('.btn-left').removeClass('bg-secondary');
+            }, 100);
+
+            break;
+
+        case 83: // down
+            down();
+
+            $('.btn-down').addClass('bg-secondary');
+            setTimeout(function () {
+                $('.btn-down').removeClass('bg-secondary');
+            }, 100);
+
+            break;
+
+        case 68: // right
+            right();
+
+            $('.btn-right').addClass('bg-secondary');
+            setTimeout(function () {
+                $('.btn-right').removeClass('bg-secondary');
+            }, 100);
+
+            break;
+
+        case 71: // G
+            
+            alert('awikwok');
+
+            break;
+
         default:
             return; // exit this handler for other keys
     }

@@ -11,5 +11,5 @@ function health() {
 
         xHealth = 0;
         yHealth = 0;
-    }, 5000);
+    }, 10000);
 }

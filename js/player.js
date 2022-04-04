@@ -6,30 +6,30 @@ function move() {
     // health
     if (xHealth == x && yHealth == y) {
 
-        randomHitEnemy = Math.floor((Math.random() * 12) + 1);
+        randomHealth = Math.floor((Math.random() * 12) + 1);
 
-        if (randomHitEnemy == 1) {
+        if (randomHealth == 1) {
             hpPlayer += 60;
             if (hpPlayer > maxHp) {
                 hpPlayer = maxHp;
             }
 
-        } else if (randomHitEnemy >= 2 && randomHitEnemy <= 5) {
-            hpPlayer += 50;
+        } else if (randomHealth >= 2 && randomHealth <= 5) {
+            hpPlayer += 55;
 
             if (hpPlayer > maxHp) {
                 hpPlayer = maxHp;
             }
 
-        } else if (randomHitEnemy >= 6 && randomHitEnemy <= 8) {
+        } else if (randomHealth >= 6 && randomHealth <= 8) {
+            hpPlayer += 45;
+
+            if (hpPlayer > maxHp) {
+                hpPlayer = maxHp;
+            }
+
+        } else if (randomHealth >= 9 && randomHealth <= 12) {
             hpPlayer += 40;
-
-            if (hpPlayer > maxHp) {
-                hpPlayer = maxHp;
-            }
-
-        } else if (randomHitEnemy >= 9 && randomHitEnemy <= 12) {
-            hpPlayer += 35;
 
             if (hpPlayer > maxHp) {
                 hpPlayer = maxHp;
@@ -130,7 +130,27 @@ function hit() {
         $('.enemy').removeClass('bg-primary');
         $('.enemy').addClass('bg-secondary');
 
-        hpEnemy -= (10 + damagePlayer);
+        randomHitPlayer = Math.floor((Math.random() * criticalRate) + 1);
+
+        if (randomHitEnemy == 1) {
+
+            hpEnemy -= (12 + damagePlayer);
+
+        } else if (randomHitEnemy >= 2 && randomHitEnemy < 3) {
+
+            hpEnemy -= (11 + damagePlayer);
+
+        } else if (randomHitEnemy >= 3 && randomHitEnemy <= 7) {
+
+            hpEnemy -= (10 + damagePlayer);
+
+        } else if (randomHitEnemy >= 8 && randomHitEnemy <= 10) {
+
+            hpEnemy -= (9 + damagePlayer);
+
+        } else {
+            hpEnemy -= (15 + damagePlayer);
+        }
 
         $('#hpEnemy').css('width', hpEnemy + '%');
 

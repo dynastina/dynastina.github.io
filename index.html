@@ -109,7 +109,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <h6>HP</h6>
+                                    <h6>Max HP</h6>
                                 </div>
                                 <div class="col-md-8">
                                     <div>
@@ -153,8 +153,8 @@
                                 </div>
                                 <div class="col-md-9">
                                     <div>
-                                        : <span>0</span>
-                                        <span><button type="button" class="badge bg-secondary">Buy</button></span>
+                                        : <span id="buy-critical-text">0</span>
+                                        <span><button type="button" class="badge bg-warning" id="buy-critical">Buy</button></span>
                                     </div>
                                 </div>
                             </div>
@@ -255,15 +255,15 @@
                             <small>Click B to show THE SHOP</small> <br>
                             <small>Click I to show THE INFO STATUS PLAYER</small>
                             <hr>
-                            <h6>Use arrow to move player</h6>
-                            <small>Everytime you move yourself, enemy will follow</small>
+                            <h6>Move</h6>
+                            <small>Use arrow keyboard or W, A , S, D</small>
                             <hr>
-                            <h6>Use spacebar to attack</h6>
-                            <small>Attack damage is random, you can increase your damage and critical rate in
+                            <h6>Attack</h6>
+                            <small>Use spacebar keyboard, you can increase your damage and critical rate in
                                 shop</small>
                             <hr>
                             <h6>Heal</h6>
-                            <small>After killing the enemy, health potion will be appear in 5 seconds, be quick! restore
+                            <small>After killing the enemy, health potion will be appear in 10 seconds, be quick! restore
                                 your health</small>
                         </div>
                     </div>
@@ -308,10 +308,12 @@
         var shield;
         var hp;
         var maxHp;
+        var critical;
 
         var damagePlayer;
         var damageEnemy;
-        var damageEnemyUp = -1;
+        var damageEnemyUp = 0;
+        var criticalRate;
 
         //size world
         var height = 10;

@@ -40,9 +40,14 @@ function spawn() {
     hp = 0;
     maxHp = 100;
     damagePlayer = 0;
+    critical = 0;
+
+    criticalRate = 10;
 
     $('#buy-shield-text').html(shield);
     $('#buy-hp-text').html(hp);
+    $('#buy-damage-text').html(damagePlayer);
+    $('#buy-critical-text').html(critical);
 
     // restore coin
     dyneCoin = 10;
@@ -70,9 +75,11 @@ function spawnEnemy() {
 
     $('#hpenemy-info-text').html(hpEnemy);
 
-    damageEnemyUp++;
+    if (killPlayer % 2 == 0) {
 
-    console.log(damageEnemyUp);
+        damageEnemyUp++;
+
+    }
 
     // random place
     xEnemy = Math.floor((Math.random() * width) + 1);

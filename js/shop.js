@@ -14,6 +14,10 @@ $(document).ready(function () {
     $('#buy-damage').on('click', function () {
         buyDamage();
     });
+
+    $('#buy-critical').on('click', function () {
+        buyCritical();
+    });
 });
 
 function buyShield() {
@@ -90,6 +94,25 @@ function buyDamage() {
         // up
         damagePlayer += 1;
         $('#buy-damage-text').html(damagePlayer);
+
+        $('#dynecoin-info-text').html(dyneCoin);
+
+    }
+}
+
+function buyCritical() {
+
+    if (dyneCoin >= 10) {
+
+        // purchase
+        dyneCoin -= 10;
+        $('#dyneCoin').html(dyneCoin);
+
+        // up
+        critical += 1;
+        $('#buy-critical-text').html(critical);
+
+        criticalRate -= 1;
 
         $('#dynecoin-info-text').html(dyneCoin);
 

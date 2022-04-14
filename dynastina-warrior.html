@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Dynastina Warrior</title>
+</head>
+
+<body>
+
+    <div class="container mt-3">
+        <div class="text-center">
+            <h2>Dynastina Warrior</h2>
+        </div>
+        <div class="card mt-5">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="dyne-table" border="1" cellspacing="0" cellpadding="20" style="width:100%;">
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- info -->
+        <div>
+            <small style="float:left;">Click H for Help</small>
+            <small style="float:right;">Copyright Ganden Dynastina</small>
+        </div>
+        <!-- health bar -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h4>Player Health</h4>
+                <div class="progress bg-danger">
+                    <div class="progress-bar bg-success" role="progressbar" style="width:100%" id="hpPlayer"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>Enemy Health</h4>
+                <div class="progress bg-danger">
+                    <div class="progress-bar bg-success" role="progressbar" style="width:100%" id="hpEnemy"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <div class="col-md-6">
+                <h6>Kill : <span id="killPlayer">0</span></h6>
+                <h6>Dyne Coin : <span id="dyneCoin">0</span></h6>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center w-100">
+                    <button class="btn-up">Up</button>
+                </div>
+                <div class="d-flex justify-content-center w-100">
+                    <button class="btn-left">Left</button>
+                    <button class="btn-right">Right</button>
+                </div>
+                <div class="d-flex justify-content-center w-100">
+                    <button class="btn-down">Down</button>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-center w-100">
+                    <button class="btn-attack">Attack</button>
+                </div>
+                <div class="d-flex justify-content-center w-100 mt-3">
+                    <button class="btn-shop">Shop</button>
+                    <button class="btn-help">Help</button>
+                    <button class="btn-info-dw">Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SHOP -->
+    <div class="modal fade" id="shopModal" tabindex="-1" aria-labelledby="shopModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shopModalLabel">Shop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Defense (10 coin)</h6>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Shield</h6>
+                                </div>
+                                <div class="col-md-8">
+                                    <div>
+                                        : <span id="buy-shield-text">0</span>
+                                        <span><button type="button" class="badge bg-warning"
+                                                id="buy-shield">Buy</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Max HP</h6>
+                                </div>
+                                <div class="col-md-8">
+                                    <div>
+                                        : <span id="buy-hp-text">0</span>
+                                        <span><button type="button" class="badge bg-warning"
+                                                id="buy-hp">Buy</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Full HP</h6>
+                                </div>
+                                <div class="col-md-8">
+                                    <div>
+                                        : <span>~</span>
+                                        <span><button type="button" class="badge bg-warning"
+                                                id="buy-restore-hp">Buy</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Attack (10 coin)</h6>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h6>Damage</h6>
+                                </div>
+                                <div class="col-md-9">
+                                    <div>
+                                        : <span id="buy-damage-text">0</span>
+                                        <span><button type="button" class="badge bg-warning"
+                                                id="buy-damage">Buy</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h6>Critical</h6>
+                                </div>
+                                <div class="col-md-9">
+                                    <div>
+                                        : <span id="buy-critical-text">0</span>
+                                        <span><button type="button" class="badge bg-warning" id="buy-critical">Buy</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal INFO -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Info Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>HP Player</h6>
+                                </div>
+                                <div class="col-md-8">
+                                    <div>
+                                        : <span id="hp-info-text">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Max HP Player</h6>
+                                </div>
+                                <div class="col-md-8">
+                                    <div>
+                                        : <span id="maxhp-info-text">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Kill Player</h6>
+                                </div>
+                                <div class="col-md-8">
+                                    <div>
+                                        : <span id="kill-info-text">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Dyne Coin</h6>
+                                </div>
+                                <div class="col-md-8">
+                                    <div>
+                                        : <span id="dynecoin-info-text">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>HP Enemy</h6>
+                                </div>
+                                <div class="col-md-8">
+                                    <div>
+                                        : <span id="hpenemy-info-text">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal HELP -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helpModalLabel">HELP</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Basic</h6>
+                            <small>Kill the enemy, by move yourself to the enemy next to you and hit them by clicking
+                                the spacebar</small>
+                            <hr>
+                            <h6>Coin</h6>
+                            <small>We use DYNECOIN to buy and upgrade yourself</small>
+                            <hr>
+                            <h6>Shortcut</h6>
+                            <small>Click B to show THE SHOP</small> <br>
+                            <small>Click I to show THE INFO STATUS PLAYER</small>
+                            <hr>
+                            <h6>Move</h6>
+                            <small>Use arrow keyboard or W, A , S, D</small>
+                            <hr>
+                            <h6>Attack</h6>
+                            <small>Use spacebar keyboard, you can increase your damage and critical rate in
+                                shop</small>
+                            <hr>
+                            <h6>Heal</h6>
+                            <small>After killing the enemy, health potion will be appear in 10 seconds, be quick! restore
+                                your health</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        //general
+        //starting coordinate
+        var x = 1;
+        var y = 1;
+
+        //declare
+        var xEnemy;
+        var yEnemy;
+        var xHealth;
+        var yHealth;
+
+        var hpEnemy;
+        var hpPlayer;
+
+        var dyneCoin;
+        var shield;
+        var hp;
+        var maxHp;
+        var critical;
+
+        var damagePlayer;
+        var damageEnemy;
+        var damageEnemyUp = 0;
+        var criticalRate;
+
+        var modeEnemy = 'bg-primary';
+
+        //size world
+        var height = 10;
+        var width = 30;
+    </script>
+    <script src="js/world.js"></script>
+    <script src="js/control.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/supply.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+
+</html>

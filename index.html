@@ -1,103 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ganden Project Collection</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
 
-    <title>Ganden Dynastina's Github</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+
+
 </head>
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
-<body>
+	<section class="site-section" id="section-portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="section-heading text-center col-md-12">
+					<h2><strong>Project</strong> Collections </h2>
+					<h6>Ganden Dynastina Ichsan</h6>
+				</div>
+			</div>
+			<div class="filters">
+				<ul>
+					<li class="active" data-filter="*">All</li>
+					<li data-filter=".laravel">Laravel</li>
+					<li data-filter=".ci">Code Igniter</li>
+					<li data-filter=".cake">Cake PHP</li>
+					<li data-filter=".react">React</li>
+					<li data-filter=".js">JS</li>
+					<li data-filter=".python">Python</li>
+				</ul>
+			</div>
 
-    <div class="container mt-5">
-        <h2 class="text-center">Projects</h2>
-        <p class="text-center">Welcome to my boredom project collections. Hope you enjoy it!</p>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mt-5" style="height: 450px;">
-                    <img src="img/dw.png" class="card-img-top" alt="Dynastina Warrior" style="height: 250px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Dynastina Warrior</h5>
-                        <p class="card-text">My simple RPG web game, build with Javascript and Jquery</p>
-                        <a href="dynastina-warrior.html" class="btn btn-primary" target="_blank">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mt-5" style="height: 450px;">
-                    <img src="img/suwit.png" class="card-img-top" alt="Suwit Game" style="height: 250px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Suwit</h5>
-                        <p class="card-text">Simple rock paper scissors against the computer. Build with Javascript and Jquery</p>
-                        <a href="suwit.html" class="btn btn-primary" target="_blank">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mt-5" style="height: 450px;">
-                    <img src="img/bot.png" class="card-img-top" alt="Suwit Game" style="height: 250px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Telegram Bot</h5>
-                        <p class="card-text">Meet this bot, simple bot which can help you to kill boredom. Build with Python</p>
-                        <a href="https://t.me/dynastina_bot" class="btn btn-primary" target="_blank">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mt-5" style="height: 450px;">
-                    <img src="img/todo.png" class="card-img-top" alt="Suwit Game" style="height: 250px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Todo List</h5>
-                        <p class="card-text">Simple to do list to arrange your temporary activities. Build with React App</p>
-                        <a href="https://react-app-ganden.herokuapp.com/" class="btn btn-primary" target="_blank">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mt-5" style="height: 450px;">
-                    <img src="img/cra.png" class="card-img-top" alt="Suwit Game" style="height: 250px;">
-                    <div class="card-body">
-                        <h5 class="card-title">API Outer Space Blog</h5>
-                        <p class="card-text">Simple blog contains international space information articles. Build with React App</p>
-                        <a href="https://tourmaline-valkyrie-e54eb1.netlify.app/" class="btn btn-primary" target="_blank">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mt-5" style="height: 450px;">
-                    <img src="img/portfolio.png" class="card-img-top" alt="Suwit Game" style="height: 250px;">
-                    <div class="card-body">
-                        <h5 class="card-title">My Portfolio Website</h5>
-                        <p class="card-text">Contains my profile, portfolio and curriculum vitae. Build with Code Igniter</p>
-                        <a href="http://dynastina.epizy.com/" class="btn btn-primary" target="_blank">Visit</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+			<div class="filters-content">
+				<div class="row grid">
+					<div class="single-portfolio col-sm-4 all js">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<a href="app/dynastina-warrior.html" target="_blank">
+									<img class="image img-fluid" src="images/thumbnail/dw.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="p-inner">
+							<h4>Dynastina warrior</h4>
+							<div class="cat">Javascript</div>
+						</div>
+					</div>
+					<div class="single-portfolio col-sm-4 all js">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<a href="app/suwit.html" target="_blank">
+									<img class="image img-fluid" src="images/thumbnail/suwit.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="p-inner">
+							<h4>Rock Paper Scissors</h4>
+							<div class="cat">Javascript</div>
+						</div>
+					</div>
+					<div class="single-portfolio col-sm-4 all python">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<a href="https://t.me/dynastina_bot" target="_blank">
+									<img class="image img-fluid" src="images/thumbnail/bot.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="p-inner">
+							<h4>Telegram Bot</h4>
+							<div class="cat">Python</div>
+						</div>
+					</div>
+					<div class="single-portfolio col-sm-4 all react">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<a href="https://react-app-ganden.herokuapp.com/" target="_blank">
+									<img class="image img-fluid" src="images/thumbnail/todo.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="p-inner">
+							<h4>To Do List</h4>
+							<div class="cat">React</div>
+						</div>
+					</div>
+					<div class="single-portfolio col-sm-4 all react">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<a href="https://tourmaline-valkyrie-e54eb1.netlify.app/" target="_blank">
+									<img class="image img-fluid" src="images/thumbnail/cra.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="p-inner">
+							<h4>Outer Space Blog</h4>
+							<div class="cat">React</div>
+						</div>
+					</div>
+					<div class="single-portfolio col-sm-4 all ci">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<a href="https://m.facebook.com/akunbackup.akunbackup.12" target="_blank">
+									<img class="image img-fluid" src="images/thumbnail/portfolio.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="p-inner">
+							<h4>My Portfolio Website</h4>
+							<div class="cat">Code Igniter</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- .section -->
 
 
 
-    <!-- script -->
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+	<footer class="site-footer">
+		<div class="container">			
+			<div class="row mb-5">
+				<div class="col-md-12 text-center">
+					<p>
+						<a href="https://m.facebook.com/akunbackup.akunbackup.12" class="social-item" target="_blank"><span class="icon-facebook2"></span></a>
+						<a href="https://twitter.com/dynastina" class="social-item" target="_blank"><span class="icon-twitter"></span></a>
+						<a href="https://www.instagram.com/dynastina_/" class="social-item" target="_blank"><span class="icon-instagram2"></span></a>
+						<a href="https://www.linkedin.com/in/ganden-dynastina/" class="social-item" target="_blank"><span class="icon-linkedin2"></span></a>
+						<a href="https://github.com/dynastina" class="social-item" target="_blank"><span class="icon-github"></span></a>
+						<a href="https://wa.me/+6283879453415" class="social-item" target="_blank"><span class="icon-whatsapp"></span></a>
+						<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="social-item" target="_blank"><span class="icon-youtube"></span></a>
+					</p>
+				</div>
+			</div>
+			
+		</div>
+	</footer>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
 
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</body>
 
-</html>
+
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/vendor/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+
+	<script src="js/vendor/jquery.easing.1.3.js"></script>
+
+	<script src="js/vendor/jquery.stellar.min.js"></script>
+	<script src="js/vendor/jquery.waypoints.min.js"></script>
+
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+	<script src="js/custom.js"></script>
+
+	<!-- Google Map -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    	<script src="js/google-map.js"></script> -->
+
+    </body>
+    </html>
